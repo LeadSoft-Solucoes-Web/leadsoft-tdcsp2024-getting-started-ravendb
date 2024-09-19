@@ -1,0 +1,34 @@
+﻿services:
+  raven1:
+    image: ravendb/ravendb:latest
+    container_name: raven1
+    hostname: raven1
+    ports:
+      - 8080:8080
+      - 38888:38888
+    environment:
+      - RAVEN_Security_UnsecuredAccessAllowed=PublicNetwork
+      - RAVEN_Setup_Mode=None
+      - RAVEN_License_Eula_Accepted=true
+  raven2:
+    image: ravendb/ravendb:latest
+    container_name: raven2
+    hostname: raven2
+    ports:
+      - 8081:8080
+      - 38889:38888
+    environment:
+      - RAVEN_Security_UnsecuredAccessAllowed=PublicNetwork
+      - RAVEN_Setup_Mode=None
+      - RAVEN_License_Eula_Accepted=true
+  raven3:
+    image: ravendb/ravendb:latest
+    container_name: raven3
+    hostname: raven3
+    ports:
+      - 8082:8080
+      - 38890:38888
+    environment:
+      - RAVEN_Security_UnsecuredAccessAllowed=PublicNetwork
+      - RAVEN_Setup_Mode=None
+      - RAVEN_License_Eula_Accepted=true
